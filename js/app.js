@@ -2,7 +2,7 @@
 const Enemy = function(row, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-    this.x = -10;
+    this.x = -100;
     this.y = 60 + (row - 1) * 80;
     this.speed = speed;
 
@@ -50,20 +50,15 @@ Player.prototype.handleInput = function(keyPress) {
     if(keyPress == 'left' && this.x > 0) {
         this.x -= 100;
     }
-    if (keyPress == 'right' && this.x < 420) {
+    if (keyPress == 'right' && this.x < 400) {
         this.x += 100;
     } 
     if (keyPress == 'up' && this.y > 0) {
         this.y -= 80;
     } 
-    if (keyPress == 'down' && this.y < 400) {
+    if (keyPress == 'down' && this.y < 380) {
         this.y += 80;
     }
-}
-
-Player.prototype.reset = function() {
-    this.x = 200;
-    this.y = 400;
 }
 
 // Now instantiate your objects.
