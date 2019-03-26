@@ -15,6 +15,17 @@ Your **README.md** file should be updated with instructions on both how to 1. Ru
 
 For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
 
-## Contributing
+## Game instructions
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Clone this repo to your local machine.
+
+Open the index.html file in your browser.
+
+Use arrow keys to move player up, left, right, and down.
+
+Avoid bugs or be sent back to start.
+
+Goal is to make it to the water without being hit by a bug.
+
+
+

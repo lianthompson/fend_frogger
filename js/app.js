@@ -30,7 +30,7 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-const Player = function() {
+var Player = function() {
     this.x = 200;
     this.y = 380;
     this.sprite = "images/char-cat-girl.png";
@@ -47,22 +47,17 @@ Player.prototype.render = function() {
 
 Player.prototype.handleInput = function(keyPress) {
 
-    if(keyPress === 'left') {
-        if(this.x > 0) {
-            this.x = this.x -100;
-        }
-    } else if (keyPress === 'right') {
-        if(this.x < 400) {
-            this.x = this.x + 100;
-        }
-    } else if (keyPress === 'up') {
-        if (this.y > 0) {
-            this.y = this.y - 80;
-        }
-    } else if (keyPress === 'down') {
-        if(this.y < 380) {
-            this.y = this.y + 80;
-        }
+    if(keyPress == 'left' && this.x > 0) {
+        this.x -= 100;
+    }
+    if (keyPress == 'right' && this.x < 400) {
+        this.x += 100;
+    } 
+    if (keyPress == 'up' && this.y > 0) {
+        this.y -= 80;
+    } 
+    if (keyPress == 'down' && this.y < 380) {
+        this.y += 80;
     }
 }
 
@@ -83,11 +78,12 @@ for(let i = 0; i < 7; i++) {
     allEnemies[i] = new Enemy(random_row, random_speed);
 }
 
+const player = new Player();
+
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const player = new Player();
 
 
 // This listens for key presses and sends the keys to your
