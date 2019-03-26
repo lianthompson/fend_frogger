@@ -2,7 +2,7 @@
 const Enemy = function(row, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-    this.x = -100;
+    this.x = -10;
     this.y = 60 + (row - 1) * 80;
     this.speed = speed;
 

@@ -84,8 +84,8 @@ var Engine = (function(global) {
 
     function checkCollisions() {
         allEnemies.forEach(function(enemy) {
-            if(Math.round(enemy.x / 100) === Math.round(player.x / 100) 
-            && Math.round(player.y / 80)){
+            if(Math.round(enemy.x / 100) == Math.round(player.x / 100) 
+            && Math.round(enemy.y / 80) == Math.round(player.y / 80)){
                 player.reset();
             }
         });
