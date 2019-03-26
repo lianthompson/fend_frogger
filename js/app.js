@@ -32,13 +32,13 @@ Enemy.prototype.render = function() {
 
 var Player = function() {
     this.x = 200;
-    this.y = 380;
+    this.y = 400;
     this.sprite = "images/char-cat-girl.png";
 };
 
 Player.prototype.update = function() {
     this.x = 200;
-    this.y = 380;
+    this.y = 400;
 };
 
 Player.prototype.render = function() {
@@ -50,20 +50,20 @@ Player.prototype.handleInput = function(keyPress) {
     if(keyPress == 'left' && this.x > 0) {
         this.x -= 100;
     }
-    if (keyPress == 'right' && this.x < 400) {
+    if (keyPress == 'right' && this.x < 420) {
         this.x += 100;
     } 
     if (keyPress == 'up' && this.y > 0) {
         this.y -= 80;
     } 
-    if (keyPress == 'down' && this.y < 380) {
+    if (keyPress == 'down' && this.y < 400) {
         this.y += 80;
     }
 }
 
 Player.prototype.reset = function() {
     this.x = 200;
-    this.y = 380;
+    this.y = 400;
 }
 
 // Now instantiate your objects.
