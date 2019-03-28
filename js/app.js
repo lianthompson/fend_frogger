@@ -5,6 +5,8 @@ const Enemy = function(row, speed) {
     this.x = -100;
     this.y = 60 + (row - 1) * 80;
     this.speed = speed;
+    this.width = 50;
+    this.height = 85;
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -33,6 +35,8 @@ Enemy.prototype.render = function() {
 var Player = function() {
     this.x = 200;
     this.y = 400;
+    this.width = 50;
+    this.height = 85;
     this.sprite = "images/char-cat-girl.png";
 };
 

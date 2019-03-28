@@ -84,11 +84,19 @@ var Engine = (function(global) {
 
     function checkCollisions() {
         allEnemies.forEach(function(enemy) {
-            if(Math.round(enemy.x / 100) == Math.round(player.x / 100) 
-            && Math.round(enemy.y / 80) == Math.round(player.y / 80)){
+            if (player.x < enemy.x + enemy.width &&
+                player.x + player.width > enemy.x &&
+                player.y < enemy.y + enemy.height &&
+                player.height + player.y > enemy.y) {
                 player.update();
             }
-        });
+        })
+        // allEnemies.forEach(function(enemy) {
+        //     if(Math.round(enemy.x / 100) === Math.round(player.x / 100) 
+        //     && Math.round(enemy.y / 80) === Math.round(player.y / 80)){
+        //         player.update();
+        //     }
+        // });
     }
 
     /* This is called by the update function and loops through all of the
